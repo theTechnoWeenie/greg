@@ -42,7 +42,7 @@ func servicesCallback(writer http.ResponseWriter, r *http.Request){ fmt.Fprintf(
 func serviceLookupCallback(writer http.ResponseWriter, r *http.Request){ fmt.Fprintf(writer, "<html><body><h1>Not Yet Implemented</h1></body></html>") }
 func pollServices(){
   for true {
-    fmt.Printf("Polling %d registered services", len(services))
+    fmt.Printf("Polling %d registered services\n", len(services))
     time.Sleep(time.Minute)
   }
 }
