@@ -6,6 +6,13 @@ import (
 	"net/http"
 )
 
+const (
+	STATUS_RUNNING  = "RUNNING"
+	STAUTS_DEGRADED = "DEGRADED"
+	STATUS_STOPPED  = "STOPPED"
+	STATUS_ERROR    = "ERROR"
+)
+
 type Servicer interface {
 	FullAddress() string
 	String() string
