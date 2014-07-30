@@ -36,7 +36,7 @@ func (s Service) String() string {
 func (s Service) IsHealthy() bool {
 	_, err := http.Get(fmt.Sprintf("http://%s:%d/healthCheck", s.Ip, s.Port))
 	if err != nil {
-		log.Printf("ERR: %s", s.String())
+		log.Printf("ERR: %s Caused By: %s", s.String(), err.Error())
 		return false
 	}
 	log.Printf("OK : %s", s.String())
